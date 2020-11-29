@@ -4,9 +4,9 @@
 A little project of mine.
 
 Actually, I was just bored and wanted to experiment a little with HTML canvas.
-</p>
 
-<img src="https://i.imgur.com/HoVA1cT.png" />
+Live Demo: <a href="https://dev-parzival.github.io/breakout/game.html">Click here!</a>
+</p>
 
 <h2>Controls</h2>
 
@@ -36,3 +36,7 @@ Actually, I was just bored and wanted to experiment a little with HTML canvas.
     <td>Move right</td>
 </tr>
 </table>
+
+<br />
+
+<img src="https://i.imgur.com/HoVA1cT.png" />
