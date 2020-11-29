@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Breakout!</title>
+
+    <!-- #region META -->
+    <meta name="author" content="Parzival parzival@parzival-dev.eu">
+    <meta name="description" content="Wanna play Pong?" />
+    <meta name="keywords" content="pong">
+    <!-- #endregion -->
+
+    <!-- #region FAVICON -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" sizes="32x32">
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="./images/favicon-96x96.png" type="image/png" sizes="96x96">
+    <!-- #endregion -->
+
+    <!-- #region SCRIPTS -->
+    <script src="./javascripts/jQuery.js" type="text/javascript"></script>
+    <!-- Yeee jQuery... Im lazy :) -->
+    <script>
+        $(() => {
+            var game = document.getElementById("game");
+            game.setAttribute("width", window.innerWidth);
+            game.setAttribute("height", window.innerHeight);
+            $.getScript("javascripts/Game.js").done(() => console.log(`%c[Client] `, `color: cyan;`,
+                `javascripts/Game.js wurde geladen.`)).fail(() => console.log(`%c[Client]`, `color: cyan;`,
+                    `javascripts/Game.js konnte nicht geladen werden.`));
+        });
+    </script>
+    <!-- #endregion -->
+
+    <!-- #region STYLE -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            background: rgb(0, 0, 0);
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: white;
+            /*cursor: none;*/
+        }
+    </style>
+    <!-- #endregion -->
+</head>
+
+<body>
+    <canvas id="game"></canvas>
+</body>
+
+</html>
